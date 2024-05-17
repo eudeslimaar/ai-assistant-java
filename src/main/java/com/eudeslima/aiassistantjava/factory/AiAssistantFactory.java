@@ -10,7 +10,7 @@ import java.time.Duration;
         public static ChatLanguageModel createHuggingFace(String accessToken) {
             return HuggingFaceChatModel.builder()
                     .accessToken(accessToken)
-                    .modelId("facebook/dpr-ctx_encoder-single-nq-base")
+                    .modelId("jetmoe/jetmoe-8b-chat")
                     .timeout(Duration.ofSeconds(300))
                     .build();
     }
