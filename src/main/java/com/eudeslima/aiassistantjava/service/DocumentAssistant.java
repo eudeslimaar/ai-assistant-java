@@ -1,4 +1,4 @@
-package com.eudeslima.aiassistantjava.factory;
+package com.eudeslima.aiassistantjava.service;
 
 import com.eudeslima.aiassistantjava.utils.DocumentService;
 import dev.langchain4j.memory.chat.MessageWindowChatMemory;
@@ -6,10 +6,10 @@ import dev.langchain4j.model.chat.ChatLanguageModel;
 import dev.langchain4j.rag.content.retriever.ContentRetriever;
 import dev.langchain4j.service.AiServices;
 
-public class DocumentAssistantFactory {
+public class DocumentAssistant {
     private final DocumentService documentAiService;
 
-    public DocumentAssistantFactory(ChatLanguageModel chatModel, ContentRetriever contentRetriever) {
+    public DocumentAssistant(ChatLanguageModel chatModel, ContentRetriever contentRetriever) {
         documentAiService = buildDocumentAiService(chatModel, contentRetriever);
     }
 
