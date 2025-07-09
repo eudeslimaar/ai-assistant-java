@@ -6,7 +6,7 @@ Um assistente de inteligência artificial baseado em documentos, desenvolvido co
 
 - Chat inteligente com consulta a documentos
 - Sistema RAG para busca e geração de respostas
-- Suporte a modelos locais (LM Studio) e HuggingFace
+- Suporte a modelos locais (LM Studio)
 - Interface web moderna e responsiva
 - Painel de métricas de uso e desempenho em tempo real
 
@@ -22,23 +22,17 @@ Um assistente de inteligência artificial baseado em documentos, desenvolvido co
 
 - Java 17 ou superior
 - Maven 3.6+
-- LM Studio ou servidor OpenAI compatível (opcional para modelos locais)
+- LM Studio
 
 ## Instalação e Configuração
 
 
-1. Configure o arquivo `src/main/resources/application.yml`:
-   ```yaml
-   ai:
-     modelName: "google/gemma-3n-e4b"
-   ```
-
-2. Execute a aplicação:
+1. Execute a aplicação:
    ```bash
    ./mvnw spring-boot:run
    ```
 
-3. Acesse a interface web em:  
+2. Acesse a interface web em:  
    `http://localhost:8080/`
 
 ## Uso da API
@@ -65,17 +59,16 @@ Na interface web, logo abaixo do chat, você verá um painel com:
 1. Baixe um dataset de filmes
 2. Use um script Python para converter o CSV para TXT no formato:
    ```
-   Movie: Título
-   Year: 1995
-   Genres: Comédia, Aventura
-   Synopsis: ...
-   Rating: 7.7
-   Runtime: 81
+  Movie: The Godfather
+  Year: 1972
+  Director: Francis Ford Coppola
+  Actors: Marlon Brando, Al Pacino, James Caan
+  Category: Action
+  Synopsis: The saga of the Corleone family in the Italian mafia of New York.
 
-   Movie: ...
    ```
-3. Coloque o arquivo `movies.txt` em `src/main/resources/`.
-4. Reinicie a aplicação.
+1. Coloque o arquivo `movies.txt` em `src/main/resources/`.
+2. Reinicie a aplicação.
 
 ## Arquitetura do Projeto
 
